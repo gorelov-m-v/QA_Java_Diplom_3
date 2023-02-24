@@ -3,7 +3,6 @@ package ru.yandex.practicum.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.practicum.model.LoginData;
-import ru.yandex.practicum.model.RegistrationData;
 
 public class LoginPage extends PageBase{
 

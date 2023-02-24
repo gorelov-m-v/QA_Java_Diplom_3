@@ -9,10 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.practicum.model.RegistrationData;
 import ru.yandex.practicum.pages.LoginPage;
 import ru.yandex.practicum.pages.RegistrationPage;
-
 import java.util.concurrent.TimeUnit;
-
-import static ru.yandex.practicum.pages.RegistrationPage.URL_REGISTRATION_PAGE;
 import static ru.yandex.practicum.util.Randomizer.*;
 
 public class RegistrationTests {

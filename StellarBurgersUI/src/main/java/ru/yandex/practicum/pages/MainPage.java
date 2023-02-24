@@ -1,7 +1,6 @@
 package ru.yandex.practicum.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class MainPage extends PageBase{
