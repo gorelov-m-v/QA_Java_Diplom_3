@@ -16,4 +16,8 @@ public class PageBase {
     protected void type(By locator, String text) {
         webDriver.findElement(locator).sendKeys(text);
     }
+
+    protected void checkLocator(By locator) {
+        webDriver.findElement(locator).isEnabled();
+    }
 }

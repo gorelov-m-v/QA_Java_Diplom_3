@@ -22,4 +22,9 @@ public class MainPage extends PageBase{
 
     private final By ENTER_TO_ACCOUNT_BUTTON = By.linkText("Войти в аккаунт");
     private final By STELLAR_BURGERS_LOGO = By.cssSelector("a.active > svg");
+    private final By SUBMIT_ORDER = By.xpath(".//button");
+
+    public void checkPage() {
+        checkLocator(SUBMIT_ORDER);
+    }
 }
