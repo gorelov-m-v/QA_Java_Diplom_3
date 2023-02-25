@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class PageBase {
     WebDriver webDriver;
 
+
     public PageBase(WebDriver webDriver) {
         this.webDriver = webDriver;
     }

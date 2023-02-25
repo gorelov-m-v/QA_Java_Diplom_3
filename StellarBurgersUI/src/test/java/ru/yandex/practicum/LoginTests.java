@@ -9,9 +9,6 @@ import static ru.yandex.practicum.util.Randomizer.*;
 
 public class LoginTests extends TestBase{
 
-    String email;
-    String password;
-
     @Before
     public void setUp() {
         init("RegistrationPage");
@@ -19,8 +16,7 @@ public class LoginTests extends TestBase{
                                                                  getRandomEmail(),
                                                                  getRandomPassword(8));
         registrationPage.createUser(registrationData);
-        email = registrationData.getEmail();
-        password = registrationData.getPassword();
+        getRegistrationData(registrationData);
     }
 
     @Test
