@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import ru.yandex.practicum.model.LoginData;
 
-public class LoginNavigationTests extends TestBase{
+public class LoginNavigationInputTests extends TestBase{
 
     @Before
     public void setUp() {

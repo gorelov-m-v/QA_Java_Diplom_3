@@ -30,7 +30,7 @@ public class LoginPage extends PageBase{
         checkLocator(ENTER_HEADER);
     }
 
-    public void getLoginPage(WebDriver webDriver) {
+    public void getLoginPage() {
         webDriver.get(URL_LOGIN_PAGE);
     }
 

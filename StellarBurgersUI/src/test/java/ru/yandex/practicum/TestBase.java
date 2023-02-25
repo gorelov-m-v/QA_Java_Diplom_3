@@ -5,10 +5,7 @@ import org.junit.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.practicum.model.RegistrationData;
-import ru.yandex.practicum.pages.LoginPage;
-import ru.yandex.practicum.pages.MainPage;
-import ru.yandex.practicum.pages.PasswordRecoveryPage;
-import ru.yandex.practicum.pages.RegistrationPage;
+import ru.yandex.practicum.pages.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +18,7 @@ public class TestBase {
     LoginPage loginPage = new LoginPage(webDriver);
     MainPage mainPage = new MainPage(webDriver);
     PasswordRecoveryPage passwordRecoveryPage = new PasswordRecoveryPage(webDriver);
+    PersonalAccountPage personalAccountPage = new PersonalAccountPage(webDriver);
     RegistrationData validRegistrationData = new RegistrationData(getRandomName(),
                                                                   getRandomEmail(),
                                                                   getRandomPassword(8));

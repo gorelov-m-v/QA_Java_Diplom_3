@@ -15,5 +15,18 @@ public class PersonalAccountPage extends PageBase {
     private final By CHANGE_EMAIL_FIELD = By.xpath(".//li[2]/div/div/div");
     private final By CHANGE_PASSWORD_FIELD = By.xpath(".//li[3]/div/div/div");
 
-    private final By PERSONAL_ACCOUNT_INFO = By.linkText("В этом разделе вы можете изменить свои персональные данные");
+    private final By PERSONAL_ACCOUNT_INFO = By.xpath(".//li/a[@href='/account/profile']");
+    private final By STELLAR_BURGERS_LOGO = By.className("AppHeader_header__logo__2D0X2");
+    private  final By CONSTRUCTOR_LINK = By.xpath(".//a[@href='/']");
+    public void checkPage() {
+        checkLocator(PERSONAL_ACCOUNT_INFO);
+    }
+
+    public void initTransitionToMainPageByLogo() {
+        click(STELLAR_BURGERS_LOGO);
+    }
+
+    public void initTransitionToMainPageByConstructorLink() {
+        click(CONSTRUCTOR_LINK);
+    }
 }
