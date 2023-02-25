@@ -3,10 +3,9 @@ package ru.yandex.practicum;
 import org.junit.Before;
 import org.junit.Test;
 import ru.yandex.practicum.model.RegistrationData;
-
 import static ru.yandex.practicum.util.Randomizer.*;
 
-public class RegistrationTests extends TestBase{
+public class RegistrationTests extends TestBase {
 
     @Override
     @Before

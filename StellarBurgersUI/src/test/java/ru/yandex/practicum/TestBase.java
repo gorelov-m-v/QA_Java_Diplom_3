@@ -32,6 +32,9 @@ public class TestBase {
         if (page.equals("RegistrationPage")) {
             registrationPage.getRegistrationPage();
         } else if (page.equals("LoginPage")) {
+            loginPage.getLoginPage();
+        } else if (page.equals("MainPage")) {
+            mainPage.getMainPage();
         }
     }
 
