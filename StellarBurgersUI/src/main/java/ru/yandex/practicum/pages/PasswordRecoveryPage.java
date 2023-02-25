@@ -20,7 +20,7 @@ public class PasswordRecoveryPage extends PageBase{
     private final By RECOVER_BUTTON = By.linkText("recover");
 
     public void getPasswordRecoveryPage() {
-        webDriver.get(URL_PASSWORD_RECOVERY_PAGE);
+        getPage(URL_PASSWORD_RECOVERY_PAGE);
     }
 
     public void initLogin() {

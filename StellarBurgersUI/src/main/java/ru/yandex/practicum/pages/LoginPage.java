@@ -21,17 +21,12 @@ public class LoginPage extends PageBase{
 
     private final By ENTER_HEADER = By.xpath("//h2");
 
-    public void fillRegistrationForm(LoginData loginData) {
-        type(INPUT_EMAIL_FIELD, loginData.getEmail());
-        type(INPUT_PASSWORD_FIELD, loginData.getPassword());
-    }
-
     public void checkPage() {
         checkLocator(ENTER_HEADER);
     }
 
     public void getLoginPage() {
-        webDriver.get(URL_LOGIN_PAGE);
+        getPage(URL_LOGIN_PAGE);
     }
 
     public void fillLoginForm(LoginData loginData) {

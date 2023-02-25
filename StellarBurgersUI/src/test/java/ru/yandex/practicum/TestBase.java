@@ -2,6 +2,7 @@ package ru.yandex.practicum;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.practicum.model.RegistrationData;
@@ -22,8 +23,8 @@ public class TestBase {
     RegistrationData validRegistrationData = new RegistrationData(getRandomName(),
                                                                   getRandomEmail(),
                                                                   getRandomPassword(8));
-    String email;
-    String password;
+    static String email;
+    static String password;
 
     public void init(String page) {
         WebDriverManager.chromedriver().setup();
@@ -42,6 +43,14 @@ public class TestBase {
         email = registrationData.getEmail();
         password = registrationData.getPassword();
     }
+
+    @Before
+    public void setUp() {
+        init("RegistrationPage");
+        registrationPage.createUser(validRegistrationData);
+        getRegistrationData(validRegistrationData);
+    }
+
     @After
     public void tearDown() {
         close();

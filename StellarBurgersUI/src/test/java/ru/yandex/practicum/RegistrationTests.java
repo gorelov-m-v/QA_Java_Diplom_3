@@ -8,11 +8,11 @@ import static ru.yandex.practicum.util.Randomizer.*;
 
 public class RegistrationTests extends TestBase{
 
+    @Override
     @Before
     public void setUp() {
         init("RegistrationPage");
     }
-
     @Test
     public void positiveRegistrationTest() {
         registrationPage.createUser(new RegistrationData(getRandomName(),

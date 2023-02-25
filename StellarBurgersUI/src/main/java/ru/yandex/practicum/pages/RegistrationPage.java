@@ -36,7 +36,7 @@ public class RegistrationPage extends PageBase{
     }
 
     public void getRegistrationPage() {
-        webDriver.get(URL_REGISTRATION_PAGE);
+        getPage(URL_REGISTRATION_PAGE);
     }
 
     public void initLogin() {

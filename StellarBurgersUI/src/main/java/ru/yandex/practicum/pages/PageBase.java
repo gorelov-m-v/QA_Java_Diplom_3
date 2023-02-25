@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 public class PageBase {
     WebDriver webDriver;
 
-
     public PageBase(WebDriver webDriver) {
         this.webDriver = webDriver;
     }
@@ -18,5 +17,9 @@ public class PageBase {
     }
     protected void checkLocator(By locator) {
         webDriver.findElement(locator).isEnabled();
+    }
+
+    protected void getPage(String url) {
+        webDriver.get(url);
     }
 }

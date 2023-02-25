@@ -27,7 +27,7 @@ public class MainPage extends PageBase {
         checkLocator(SUBMIT_ORDER);
     }
     public void getMainPage() {
-        webDriver.get(URL_MAIN_PAGE);
+        getPage(URL_MAIN_PAGE);
     }
     public void initLogin() {
         click(ENTER_TO_ACCOUNT_BUTTON);

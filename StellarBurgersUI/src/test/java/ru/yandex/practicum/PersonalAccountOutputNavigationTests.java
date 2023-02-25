@@ -5,6 +5,8 @@ import org.junit.Test;
 import ru.yandex.practicum.model.LoginData;
 
 public class PersonalAccountOutputNavigationTests extends TestBase{
+
+    @Override
     @Before
     public void setUp() {
         init("RegistrationPage");
