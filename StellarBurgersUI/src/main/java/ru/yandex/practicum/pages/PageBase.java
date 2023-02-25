@@ -22,4 +22,8 @@ public class PageBase {
     protected void getPage(String url) {
         webDriver.get(url);
     }
+
+    protected String getText(By locator) {
+        return  webDriver.findElement(locator).getText();
+    }
 }

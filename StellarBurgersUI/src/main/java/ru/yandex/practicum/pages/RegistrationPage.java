@@ -1,5 +1,6 @@
 package ru.yandex.practicum.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.practicum.model.RegistrationData;
@@ -20,6 +21,7 @@ public class RegistrationPage extends PageBase{
 
     private final By SUBMIT_REGISTRATION_BUTTON = By.xpath(".//button");
     private final By SING_IN_LINK = By.linkText("Войти");
+    private final String PASSWORD_ERROR_MESSAGE = "Некорректный пароль";
 
     public void fillRegistrationForm(RegistrationData registrationData) {
         type(INPUT_NAME_FIELD, registrationData.getName());
@@ -33,6 +35,7 @@ public class RegistrationPage extends PageBase{
 
     public void checkWrongPasswordMessage() {
         checkLocator(WRONG_PASSWORD_MESSAGE);
+        Assert.assertEquals(PASSWORD_ERROR_MESSAGE, getText(WRONG_PASSWORD_MESSAGE));
     }
 
     public void getRegistrationPage() {
