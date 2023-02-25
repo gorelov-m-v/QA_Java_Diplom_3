@@ -14,10 +14,7 @@ public class LoginPage extends PageBase{
 
     private final By INPUT_EMAIL_FIELD = By.xpath(".//fieldset/div/div/input");
     private final By INPUT_PASSWORD_FIELD = By.xpath(".//input[@name='Пароль']");
-
     private final By SUBMIT_LOGIN_BUTTON = By.xpath(".//button");
-    private final By REGISTRATION_LINK = By.linkText("Зарегистрироваться");
-    private final By RECOVER_PASSWORD_LINK = By.linkText("Восстановить пароль");
 
     private final By ENTER_HEADER = By.xpath("//h2");
 

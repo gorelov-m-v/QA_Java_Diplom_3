@@ -10,14 +10,8 @@ public class PasswordRecoveryPage extends PageBase{
     }
 
     private final String URL_PASSWORD_RECOVERY_PAGE = "https://stellarburgers.nomoreparties.site/forgot-password";
-
-    private final By INPUT_EMAIL_FIELD = By.xpath(".//input[@name='name']");
-
-    private final By PASSWORD_RECOVERY_HEADER = By.linkText("Восстановление пароля");
-
     private final By ENTER_LINK = By.linkText("Войти");
 
-    private final By RECOVER_BUTTON = By.linkText("recover");
 
     public void getPasswordRecoveryPage() {
         getPage(URL_PASSWORD_RECOVERY_PAGE);
