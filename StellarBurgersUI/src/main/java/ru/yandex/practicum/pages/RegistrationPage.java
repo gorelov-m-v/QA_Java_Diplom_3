@@ -35,11 +35,16 @@ public class RegistrationPage extends PageBase{
         checkLocator(WRONG_PASSWORD_MESSAGE);
     }
 
-    public void getRegistrationPage(WebDriver webDriver) {
+    public void getRegistrationPage() {
         webDriver.get(URL_REGISTRATION_PAGE);
     }
 
     public void initLogin() {
         click(SING_IN_LINK);
+    }
+
+    public void createUser(RegistrationData registrationData) {
+        fillRegistrationForm(registrationData);
+        submitRegistration();
     }
 }

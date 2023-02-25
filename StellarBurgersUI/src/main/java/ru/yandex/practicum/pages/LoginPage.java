@@ -43,4 +43,9 @@ public class LoginPage extends PageBase{
         click(SUBMIT_LOGIN_BUTTON);
     }
 
+    public void loginByUser(LoginData loginData) {
+        fillLoginForm(loginData);
+        submitLogin();
+    }
+
 }
