@@ -25,7 +25,7 @@ public class RegistrationTests extends TestBase{
     public void negativeRegistrationTest() {
         registrationPage.createUser(new RegistrationData(getRandomName(),
                                                          getRandomEmail(),
-                                                         getRandomPassword(8)));
+                                                         getRandomPassword(5)));
         registrationPage.checkWrongPasswordMessage();
     }
 }

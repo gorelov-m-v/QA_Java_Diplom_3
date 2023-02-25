@@ -12,7 +12,7 @@ public class RegistrationPage extends PageBase{
 
     public static final String URL_REGISTRATION_PAGE = "https://stellarburgers.nomoreparties.site/register";
     private final By REGISTRATION_HEADER = By.linkText("Регистрация");
-    private final By WRONG_PASSWORD_MESSAGE = By.xpath("//div[@id='root']/div/main/div/h2");
+    private final By WRONG_PASSWORD_MESSAGE = By.xpath("//*[@id='root']/div/main/div/form/fieldset[3]/div/p");
 
     private final By INPUT_NAME_FIELD = By.xpath(".//fieldset/div/div/input");
     private final By INPUT_EMAIL_FIELD = By.xpath(".//fieldset[2]/div/div/input");
