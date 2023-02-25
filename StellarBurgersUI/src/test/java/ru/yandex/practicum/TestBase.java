@@ -7,10 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.practicum.model.RegistrationData;
 import ru.yandex.practicum.pages.LoginPage;
 import ru.yandex.practicum.pages.MainPage;
-import ru.yandex.practicum.pages.PageBase;
+import ru.yandex.practicum.pages.PasswordRecoveryPage;
 import ru.yandex.practicum.pages.RegistrationPage;
 
 import java.util.concurrent.TimeUnit;
+
+import static ru.yandex.practicum.util.Randomizer.*;
 
 public class TestBase {
 
@@ -18,7 +20,10 @@ public class TestBase {
     RegistrationPage registrationPage = new RegistrationPage(webDriver);
     LoginPage loginPage = new LoginPage(webDriver);
     MainPage mainPage = new MainPage(webDriver);
-    PageBase pageBase = new PageBase(webDriver);
+    PasswordRecoveryPage passwordRecoveryPage = new PasswordRecoveryPage(webDriver);
+    RegistrationData validRegistrationData = new RegistrationData(getRandomName(),
+                                                                  getRandomEmail(),
+                                                                  getRandomPassword(8));
     String email;
     String password;
 
