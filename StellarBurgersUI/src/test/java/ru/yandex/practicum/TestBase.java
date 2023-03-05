@@ -13,7 +13,6 @@ import java.util.concurrent.TimeUnit;
 import static ru.yandex.practicum.util.Randomizer.*;
 
 public class TestBase {
-
     WebDriver webDriver = new ChromeDriver();
     RegistrationPage registrationPage = new RegistrationPage(webDriver);
     LoginPage loginPage = new LoginPage(webDriver);

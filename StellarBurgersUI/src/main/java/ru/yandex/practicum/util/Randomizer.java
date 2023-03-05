@@ -1,38 +1,9 @@
 package ru.yandex.practicum.util;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 import com.github.javafaker.Faker;
-import static ru.yandex.practicum.util.Menu.*;
+import java.util.Random;
 
 public class Randomizer {
-
-    //    Можно выбрать только один вид булок.
-    public static String getRandomBun(String[] BUNS_ARRAY) {
-        int random = new Random().nextInt(BUNS_ARRAY.length);
-        return BUNS_ARRAY[random];
-    }
-
-    public static List<String> getRandomListOfSouses(String[] SOUSES_ARRAY) {
-        List<String> randomListOfSouses = new ArrayList<>();
-        int randomQuantitiesOfSouse = new Random().nextInt(SOUSES_LIMIT_PER_ORDER + 1);
-        for(int i = 0; i < randomQuantitiesOfSouse; i++) {
-            int randomSouseType = new Random().nextInt(SOUSES_ARRAY.length);
-            randomListOfSouses.add(SOUSES_ARRAY[randomSouseType]);
-        }
-        return randomListOfSouses;
-    }
-
-    public static List<String> getRandomListOfToppings(String[] TOPPINGS_ARRAY) {
-        List<String> randomListOfToppings = new ArrayList<>();
-        int randomQuantitiesOfToppings = new Random().nextInt(TOPPINGS_LIMIT_PER_ORDER + 1);
-        for(int i = 0; i < randomQuantitiesOfToppings; i++) {
-            int randomToppingsType = new Random().nextInt(TOPPINGS_ARRAY.length);
-            randomListOfToppings.add(TOPPINGS_ARRAY[randomToppingsType]);
-        }
-        return randomListOfToppings;
-    }
 
     public static String getRandomName() {
         String randomName = new Faker().name().firstName();
